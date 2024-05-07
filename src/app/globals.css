@@ -17,17 +17,51 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.common__padding {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex__between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 976px) {
+  .common__padding {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }  
+}
+
+@media screen and (max-width: 768px) {
+  .common__padding {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+  }  
 }
